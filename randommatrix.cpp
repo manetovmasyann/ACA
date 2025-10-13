@@ -33,14 +33,20 @@ void deleteArray(int x, int** arr)
   delete[] arr;
 
 }
-int main()
-{
-  int x;
-  int y;
-  std::cout<<"Մուտքագրեք չափերը"<<std::endl;
-  std::cin>>x>>y;
-  int**arr = ArrayGenerator(x,y);
-  createArray(x,y,arr);
-  printArray(x,y,arr);
-  return 0;
+int main ( int argc, char* argv[])
+{  if(argc<3)
+ { std::cout << "Սխալ" << std::endl;
+   return 1;
+}
+  int x = 0;
+  int y = 0 ;
+  for(int i =0;argv[1][i] !='\0';i++ )
+  x = x * 10 + ( argv[1][i] -'0') ;
+  for(int i =0;argv[2][i] !='\0';i++ )
+   y = y * 10 + ( argv[2][i] -'0') ;
+  int**arr = ArrayGenerator(x , y) ;
+  createArray( x , y , arr) ;
+  printArray( x , y , arr) ;
+  deleteArray(x , arr);
+  return 0 ;
 }

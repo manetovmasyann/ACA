@@ -20,10 +20,10 @@ Car (const std::string& name, const std::string& color ,int year , int horsepowe
 public:
 void print()
 {
-  std::cout<<"Name ="<< m_name << std::endl;
+  std::cout<<"Name = "<< m_name << std::endl;
   std::cout<<"Color = "<< m_color << std::endl;
   std::cout<<"Year = "<< m_year << std::endl;
-  std::cout<<"Horsepower ="<< m_horsepower << std::endl;
+  std::cout<<"Horsepower = "<< m_horsepower << std::endl;
   std::cout<<"FuelLevel = "<< m_fuelLevel << std::endl;
   std::cout<< "Mileage = " << m_mileage << std::endl ;  
 }

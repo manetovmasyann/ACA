@@ -26,9 +26,11 @@ void print()
   }
 }
  ~Matrix(){
-  for(int i= 0 ; i < x ;i++)
-  delete[] data[i];
-  delete[] data;
+  for(int i= 0 ; i < x ;i++){
+ 
+       delete[] data[i];
+  }
+ delete[] data;
 }
 };
 int main(){
